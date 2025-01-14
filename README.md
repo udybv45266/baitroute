@@ -62,8 +62,9 @@ The library currently supports the following languages and frameworks:
 The rules are included in the main repository. When you clone the project, you'll get them automatically:
 ```bash
 git clone https://github.com/utkusen/baitroute.git
-cp -r baitroute/rules ./rules
 ```
+
+Rules are in the `rules` directory. You can copy them to your project directory.
 
 An example project structure:
 
@@ -78,16 +79,20 @@ your-project/
 
 ### Go Implementation
 
-1. **Installation**
-
-In your existing Go project, add the baitroute library to your dependencies:
-```bash
-go get github.com/utkusen/baitroute/go
-```
-
-2. **Basic Usage**
+1. **Example Usage**
 
 Example codes are in the `go/example` directory. This is the basic usage for the `net/http` package:
+
+Navigate to the `go/examples/http` directory:
+```bash
+cd go/examples/http
+```
+
+Run `go mod init http-example` to initialize the module.
+
+Run `go mod tidy` to install the dependencies.
+
+Run `go run main.go` to start the server.
 
 ```go
 package main
@@ -187,18 +192,6 @@ func main() {
 
 ```
 
-3. **Running the Example**
-```bash
-# Navigate to go directory
-cd go/examples/http
-
-# Install dependencies
-go mod tidy
-
-# Run the example
-go run main.go
-```
-
 ### Python Implementation
 
 1. **Installation**
@@ -210,9 +203,21 @@ pip install git+https://github.com/utkusen/baitroute.git#subdirectory=py
 
 ```
 
-2. **Basic Usage**
+1. **Example Usage**
 
-Example codes are in the `py/example` directory. This is the basic usage for the `fastapi` package:
+Example codes are in the `py/example` directory. 
+
+Navigate to the `py/examples` directory:
+```bash
+cd py/examples
+```
+
+You might need to install the dependencies:
+```bash
+pip install fastapi uvicorn
+```
+
+Run `python fastapi_example.py` to start the server.
 
 ```python
 from fastapi import FastAPI
@@ -276,15 +281,6 @@ if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8087) 
 ```
 
-3. **Running the Example**
-```bash
-# Navigate to Python examples directory
-cd py/examples
-
-# Run the FastAPI example
-python fastapi_example.py
-```
-
 ### JavaScript Implementation
 
 1. **Installation**
@@ -296,9 +292,21 @@ npm install github:utkusen/baitroute#main/js
 yarn add github:utkusen/baitroute#main/js
 ```
 
-2. **Basic Usage**
+1. **Example Usage**
 
-Example codes are in the `js/example` directory. This is the basic usage for the `express` package:
+Example codes are in the `js/example` directory. 
+
+Navigate to the `js/examples` directory:
+```bash
+cd js/examples
+```
+
+You might need to install the dependencies:
+```bash
+npm install express
+```
+
+Run `ts-node app.ts` to start the server.
 
 ```typescript
 import express from 'express';
@@ -368,25 +376,6 @@ baitroute.registerWithExpress(app)
     process.exit(1);
   });
 ```
-
-3. **Running the Example**
-
-To run the Express example directly:
-```bash
-# Install ts-node globally (if not installed)
-npm install -g ts-node typescript
-
-# Navigate to js directory and install dependencies
-cd js && npm install
-
-# Build the project
-npm run build
-
-# Run the Express example
-cd examples/express
-ts-node app.ts
-```
-
 
 ## Testing
 
