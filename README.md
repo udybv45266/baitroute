@@ -14,7 +14,7 @@ _<__.-._))../ /'----'/.'_____:'.       |___/\__,_|_|\__|_|_\___/\_,_|\__\___|
 :_______________|__]__________:...'                    
 ```
 
-A web honeypot project that serves realistic, vulnerable-looking endpoints to detect vulnerability scans and mislead attackers by providing false positive results. It can be imported as a library into your project and is ready to use with its rules.
+A web honeypot project that serves realistic, vulnerable-looking endpoints to detect vulnerability scans and mislead attackers by providing false positive results. It can be imported as a library into your project and is ready to use with its rules. Go, Python and Javascript implementations are available.
 
 ## Why Do We Need This?
 
